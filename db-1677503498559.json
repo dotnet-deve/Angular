@@ -1,0 +1,40 @@
+{
+  "Employees": [
+    {
+      "id": 2,
+      "firstName": "Naresh",
+      "lastName": "Dharavath",
+      "email": "naresh@gmail.com",
+      "designation": "Software Engineer",
+      "experience": "1",
+      "technicalSkills": "Asp .Net"
+    },
+    {
+      "id": 3,
+      "firstName": "santhosh",
+      "lastName": "Dharavath",
+      "email": "santhosh@gmail.com",
+      "designation": "Software Engineer",
+      "experience": "2",
+      "technicalSkills": "Java"
+    },
+    {
+      "id": 5,
+      "firstName": "Ganesh",
+      "lastName": "Dharavath",
+      "email": "ganesh@gmail.com",
+      "designation": "Senior Software Engineer",
+      "experience": "4",
+      "technicalSkills": "Java"
+    },
+    {
+      "id": 6,
+      "firstName": "tarun",
+      "lastName": "Shivaraman",
+      "email": "tarun@gmail.com",
+      "designation": "trainee",
+      "experience": "1",
+      "technicalSkills": ".Net"
+    }
+  ]
+}

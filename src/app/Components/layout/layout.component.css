@@ -6,12 +6,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+  } */
 
-  [mat-menu-item].is-active,
-[mat-list-item].is-active {
-  background: hsla(0, 0%, 100%, 0.1) !important;
-}
-body{
-  position: fixed;
-} */

@@ -1,22 +1,22 @@
-<!-- <div >
+<div class="outer">
   <mat-toolbar color="primary">
     <mat-toolbar-row>
-      <button mat-icon-button color="accent" (click)="sidenav.toggle()">
+      <button mat-icon-button style="size-adjust: 50%" (click)="sidenav.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
-      <button mat-button color="accent">
-        <span>EMERSON</span>
-      </button>
+        <!-- <div class="mx-3 my-2 py-2 bordert">
+          <div class="text-center py-3"> -->
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsDyZJZh65KM_qs5CmGsJtd4ozYl4wR6_pjo4AYYcOtECDLyvE1efpNvW9U3jUNvdNXOM&usqp=CAU" alt="">
+          <!-- </div>
+      </div> -->
       <span class="example-spacer"></span>
-      <button mat-button color="accent" [routerLink]="['login']" >
-        <mat-icon>account_circle</mat-icon>
-      </button>
       <button
-        mat-icon-button
-        aria-label="Example icon button with a vertical three dot icon"
-        routerLinkActive="active"
+        mat-button
+        style="size-adjust: 50%"
+        color="accent"
+        [routerLink]="['/login']"
       >
-        <mat-icon>more_vert</mat-icon>
+        <mat-icon>account_circle</mat-icon>
       </button>
     </mat-toolbar-row>
   </mat-toolbar>
@@ -33,30 +33,26 @@
           <span>Employees</span>
         </a>
         <a mat-list-item [routerLink]="['projects']">
-          <mat-icon>
-            book
-         </mat-icon>&nbsp;
-            <span>Projects</span><br>
+          <mat-icon> book </mat-icon>&nbsp; <span>Projects</span><br />
         </a>
       </mat-nav-list>
     </mat-sidenav>
-    <mat-sidenav-content >
-      <div style="height: 78vh;" >
+    <mat-sidenav-content>
+      <div style="height: 84vh">
         <router-outlet></router-outlet>
       </div>
     </mat-sidenav-content>
   </mat-sidenav-container>
-  <mat-toolbar color="primary">
+  <mat-toolbar class="footer" color="primary">
     <button mat-button>
       <span>© 2023 Dribbble. All rights reserved.</span>
     </button>
-    <span class="example-spacer"></span>
-    <button mat-button>
-      <span>privacy</span>
-    </button>
-    <button mat-button>
-      <span>About</span>
-    </button>
+    <!-- <span class="example-spacer"></span>
+      <button mat-button>
+        <span>privacy</span>
+      </button>
+      <button mat-button>
+        <span>About</span>
+      </button> -->
   </mat-toolbar>
-</div> -->
-<router-outlet></router-outlet>
+</div>
