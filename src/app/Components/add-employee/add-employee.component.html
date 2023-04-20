@@ -1,73 +1,137 @@
 <div class="container allEmployees">
-  <mat-card>
+  <mat-card class="content">
     <mat-card-header>
-      <mat-card-title style="color: orange">Add New Employee</mat-card-title>
+      <mat-card-title style="color: rgba(113, 82, 117, 0.5)">Add New Employee</mat-card-title>
     </mat-card-header>
     &nbsp;
-    <div>
-      <div>
-        <mat-form-field appearance="outline" class="form-element">
-          <mat-label>UserName</mat-label>
+    <div class="card-content">
+      <div class="form-element">
+        <mat-form-field appearance="outline" >
+          <mat-label>Name</mat-label>
           <input
             matInput
-            placeholder="Naresh"
+            placeholder="Firstname"
             [(ngModel)]="employeeRecords.firstName"
           />
         </mat-form-field>
       </div>
-      <div>
-        <mat-form-field appearance="outline" class="form-element">
-          <mat-label>SurName</mat-label>
+      <div class="form-element">
+        <mat-form-field appearance="outline">
+          <mat-label>Lastname</mat-label>
           <input
             matInput
-            placeholder="Mr. John"
+            placeholder="lastname"
             [(ngModel)]="employeeRecords.lastName"
           />
         </mat-form-field>
       </div>
 
-      <div>
-        <mat-form-field appearance="outline" class="form-element">
+      <div class="form-element">
+        <mat-form-field appearance="outline">
+          <mat-label>Gender</mat-label>
+          <input
+            matInput
+            placeholder="male or female"
+            [(ngModel)]="employeeRecords.gender"
+          />
+        </mat-form-field>
+      </div>
+  
+      <div class="form-element">
+        <mat-form-field appearance="outline">
           <mat-label>Email</mat-label>
           <input
             matInput
-            placeholder="abc@gmail.com"
+            placeholder="ex@gmail.com"
             [(ngModel)]="employeeRecords.email"
           />
         </mat-form-field>
       </div>
-      <div>
-        <mat-form-field appearance="outline" class="form-element">
-          <mat-label>Designation</mat-label>
+      <div class="form-element">
+        <mat-form-field appearance="outline">
+          <mat-label>Address1</mat-label>
           <input
             matInput
-            placeholder="junior Softwar Engineer"
-            [(ngModel)]="employeeRecords.designation"
+            placeholder="permenent Address"
+            [(ngModel)]="employeeRecords.address1"
           />
         </mat-form-field>
       </div>
-      <div>
-        <mat-form-field appearance="outline" class="form-element">
-          <mat-label>Experience</mat-label>
+  
+      <div class="form-element">
+        <mat-form-field appearance="outline">
+          <mat-label>Address2</mat-label>
           <input
             matInput
-            placeholder="2"
-            [(ngModel)]="employeeRecords.experience"
+            placeholder="Secondary Address"
+            [(ngModel)]="employeeRecords.address2"
           />
         </mat-form-field>
       </div>
-
-      <div>
-        <mat-form-field appearance="outline" class="form-element">
+  
+      <div class="form-element">
+        <mat-form-field appearance="outline">
+          <mat-label>PhoneNumber</mat-label>
+          <input
+            matInput
+            placeholder="+91-"
+            [(ngModel)]="employeeRecords.phoneNumber"
+          />
+        </mat-form-field>
+      </div>
+  
+      <div class="form-element">
+        <mat-form-field appearance="outline">
+          <mat-label>TelephoneNumber</mat-label>
+          <input
+            matInput
+            placeholder="+91-"
+            [(ngModel)]="employeeRecords.telephoneNumber"
+          />
+        </mat-form-field>
+      </div>
+  
+      <div class="form-element">
+        <mat-form-field appearance="outline">
           <mat-label>Skills</mat-label>
           <input
             matInput
             placeholder=".Net, Angular"
+            [(ngModel)]="employeeRecords.skills"
+          />
+        </mat-form-field>
+      </div>
+      <div class="form-element">
+        <mat-form-field appearance="outline">
+          <mat-label>Experience</mat-label>
+          <input
+            matInput
+            placeholder=" years"
             [(ngModel)]="employeeRecords.technicalSkills"
           />
         </mat-form-field>
       </div>
-
+  
+      <div class="form-element">
+        <mat-form-field appearance="outline">
+          <mat-label>Designation</mat-label>
+          <input
+            matInput
+            placeholder=" "
+            [(ngModel)]="employeeRecords.technicalSkills"
+          />
+        </mat-form-field>
+      </div>
+      
+      <div class="form-element">
+        <mat-form-field appearance="outline">
+          <mat-label>Hobbies</mat-label>
+          <input
+            matInput
+            [(ngModel)]="employeeRecords.technicalSkills"
+          />
+        </mat-form-field>
+      </div>
       <div>
         <button
           mat-raised-button
@@ -77,8 +141,215 @@
         >
           Add
         </button>
+        &nbsp;
+        <button
+        mat-raised-button
+        style="text-align: center; color:dimgrey;"
+        routerLink="/home/employees"
+      >
+        Back
+      </button> 
       </div>
     </div>
     &nbsp;
   </mat-card>
 </div>
+
+
+<!-- <mat-card>
+  <mat-card-header>
+    <mat-card-title style="color: rgba(160, 54, 98, 0.5)">Add New Employee</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="content">
+    <div class="form-element">
+      <mat-form-field appearance="outline" >
+        <mat-label>Name</mat-label>
+        <input
+          matInput
+          placeholder="Firstname"
+          [(ngModel)]="employeeRecords.firstName"
+        />
+      </mat-form-field>
+    </div>
+    <div class="form-element">
+      <mat-form-field appearance="outline">
+        <mat-label>Lastname</mat-label>
+        <input
+          matInput
+          placeholder="lastname"
+          [(ngModel)]="employeeRecords.lastName"
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="form-element">
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          placeholder="ex@gmail.com"
+          [(ngModel)]="employeeRecords.email"
+        />
+      </mat-form-field>
+    </div>
+    <div class="form-element">
+      <mat-form-field appearance="outline">
+        <mat-label>Gender</mat-label>
+        <input
+          matInput
+          placeholder="male or female"
+          [(ngModel)]="employeeRecords.designation"
+        />
+      </mat-form-field>
+    </div>
+    <div class="form-element">
+      <mat-form-field appearance="outline">
+        <mat-label>Address1</mat-label>
+        <input
+          matInput
+          placeholder="permenent Address"
+          [(ngModel)]="employeeRecords.experience"
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="form-element">
+      <mat-form-field appearance="outline">
+        <mat-label>Address2</mat-label>
+        <input
+          matInput
+          placeholder="Secondary Address"
+          [(ngModel)]="employeeRecords.technicalSkills"
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="form-element">
+      <mat-form-field appearance="outline">
+        <mat-label>PhoneNumber</mat-label>
+        <input
+          matInput
+          placeholder="+91-"
+          [(ngModel)]="employeeRecords.technicalSkills"
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="form-element">
+      <mat-form-field appearance="outline">
+        <mat-label>TelephoneNumber</mat-label>
+        <input
+          matInput
+          placeholder="+91-"
+          [(ngModel)]="employeeRecords.technicalSkills"
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="form-element">
+      <mat-form-field appearance="outline">
+        <mat-label>Skills</mat-label>
+        <input
+          matInput
+          placeholder=".Net, Angular"
+          [(ngModel)]="employeeRecords.technicalSkills"
+        />
+      </mat-form-field>
+    </div>
+    <div class="form-element">
+      <mat-form-field appearance="outline">
+        <mat-label>Experience</mat-label>
+        <input
+          matInput
+          placeholder=" years"
+          [(ngModel)]="employeeRecords.technicalSkills"
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="form-element">
+      <mat-form-field appearance="outline">
+        <mat-label>Designation</mat-label>
+        <input
+          matInput
+          placeholder=" "
+          [(ngModel)]="employeeRecords.technicalSkills"
+        />
+      </mat-form-field>
+    </div>
+
+    </div>
+    
+  </mat-card-content>
+  
+  <mat-card-actions>
+    <button mat-button>
+      <div>
+        <button
+          mat-raised-button
+          color="primary"
+          style="text-align: center"
+          (click)="addRecords()"
+        >
+          Add
+        </button>
+        &nbsp;
+        <button
+        mat-raised-button
+        style="text-align: center; color:dimgrey;"
+        routerLink="/home/employees"
+      >
+        Back
+      </button> 
+      </div>
+    </button>
+  </mat-card-actions>
+</mat-card> -->
+
+<!-- <div class="main-content">
+  <form class="row g-3">
+    <div class="col-md-6">
+      <label for="inputEmail4" class="form-label">Email</label>
+      <input type="email" class="form-control" id="inputEmail4">
+    </div>
+    <div class="col-md-6">
+      <label for="inputPassword4" class="form-label">Password</label>
+      <input type="password" class="form-control" id="inputPassword4">
+    </div>
+    <div class="col-12">
+      <label for="inputAddress" class="form-label">Address</label>
+      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    </div>
+    <div class="col-12">
+      <label for="inputAddress2" class="form-label">Address 2</label>
+      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+    </div>
+    <div class="col-md-6">
+      <label for="inputCity" class="form-label">City</label>
+      <input type="text" class="form-control" id="inputCity">
+    </div>
+    <div class="col-md-4">
+      <label for="inputState" class="form-label">State</label>
+      <select id="inputState" class="form-select">
+        <option selected>Choose...</option>
+        <option>...</option>
+      </select>
+    </div>
+    <div class="col-md-2">
+      <label for="inputZip" class="form-label">Zip</label>
+      <input type="text" class="form-control" id="inputZip">
+    </div>
+    <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck">
+        <label class="form-check-label" for="gridCheck">
+          Check me out
+        </label>
+      </div>
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Sign in</button>
+    </div>
+  </form>
+</div> -->

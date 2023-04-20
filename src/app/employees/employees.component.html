@@ -1,22 +1,16 @@
 <div class="outer">
-  <div class=" container allEmployees">
+  <div class="header">
+    <h2>Employee Records</h2>
+  </div>
+  <div class=" container">
     <div class="icon">
-      <button mat-button color="primary" routerLink="/home/add-employee">
+      <button mat-button style="color: black;" routerLink="/home/add-employee">
         <mat-icon class="fontIcon">add_circle</mat-icon>
       </button>
     </div>
   </div>
-  <div class="allEmployees" class="mat-elevation-z8">
-    <mat-table [dataSource]="allEmployees">
-      <!--- Note that these columns can be defined in any order.
-      The actual rendered columns are set as a property on the row definition" -->
-
-      <!-- id Column -->
-      <ng-container matColumnDef="id">
-        <mat-header-cell *matHeaderCellDef>ID</mat-header-cell>
-        <mat-cell *matCellDef="let element">{{ element.id }}</mat-cell>
-      </ng-container>
-
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="allEmployees" >
       <!-- Name Column -->
       <ng-container matColumnDef="firstName">
         <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
@@ -67,6 +61,9 @@
               fontIcon="edit"
             ></mat-icon>
           </a>
+          <a [routerLink]="['/home/view-employee', element.id]">
+            <mat-icon style="color: green;">remove_red_eye</mat-icon>
+          </a>
           <mat-icon
             aria-hidden="false"
             (click)="openDeleteModel(element.id)"
@@ -79,10 +76,10 @@
       </ng-container>
       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
       <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
-    </mat-table>
+    </table>
     <mat-paginator
       #paginator
-      [pageSizeOptions]="[2, 5, 10, 15]"
+      [pageSizeOptions]="[5, 10, 15]"
       showFirstLastButtons
     ></mat-paginator>
   </div>

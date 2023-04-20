@@ -4,42 +4,36 @@
       <button mat-icon-button style="size-adjust: 50%" (click)="sidenav.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
-        <!-- <div class="mx-3 my-2 py-2 bordert">
-          <div class="text-center py-3"> -->
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsDyZJZh65KM_qs5CmGsJtd4ozYl4wR6_pjo4AYYcOtECDLyvE1efpNvW9U3jUNvdNXOM&usqp=CAU" alt="">
-          <!-- </div>
-      </div> -->
+        <div class="logo">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsDyZJZh65KM_qs5CmGsJtd4ozYl4wR6_pjo4AYYcOtECDLyvE1efpNvW9U3jUNvdNXOM&usqp=CAU" alt="">
+      </div> 
       <span class="example-spacer"></span>
-      <button
-        mat-button
-        style="size-adjust: 50%"
-        color="accent"
-        [routerLink]="['/login']"
-      >
-        <mat-icon>account_circle</mat-icon>
-      </button>
+      <app-profile-menu></app-profile-menu>
     </mat-toolbar-row>
   </mat-toolbar>
-  <mat-sidenav-container class="example-container">
-    <mat-sidenav #sidenav opened="true" mode="side">
+  <mat-sidenav-container>
+    <mat-sidenav class="content" #sidenav opened="true" mode="side">
       <mat-nav-list>
-        <a mat-list-item [routerLink]="['dashboard']">
-          <mat-icon>dashboard</mat-icon>
-          &nbsp;
-          <span class="name-text">Dashboard</span>
+        <div>
+          <a mat-list-item [routerLink]="['dashboard']" routerLinkActive="active">
+            <mat-icon class="icon-adjust">dashboard</mat-icon>
+            <span class="span-font">Dashboard</span>
+          </a>
+        </div>
+        <a mat-list-item [routerLink]="['employees']" routerLinkActive="active" >
+          <mat-icon class="icon-adjust">groups</mat-icon>
+          <span class="span-font">Employees</span>
         </a>
-        <a mat-list-item [routerLink]="['employees']" title="Employees">
-          <mat-icon>groups</mat-icon> &nbsp;
-          <span>Employees</span>
-        </a>
-        <a mat-list-item [routerLink]="['projects']">
-          <mat-icon> book </mat-icon>&nbsp; <span>Projects</span><br />
+        <a mat-list-item [routerLink]="['projects']" routerLinkActive="active">
+          <mat-icon class="icon-adjust"> book </mat-icon>
+          <span class="span-font">Projects</span><br />
         </a>
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
       <div style="height: 84vh">
         <router-outlet></router-outlet>
+        <lib-ng-toast></lib-ng-toast>
       </div>
     </mat-sidenav-content>
   </mat-sidenav-container>
@@ -47,12 +41,5 @@
     <button mat-button>
       <span>© 2023 Dribbble. All rights reserved.</span>
     </button>
-    <!-- <span class="example-spacer"></span>
-      <button mat-button>
-        <span>privacy</span>
-      </button>
-      <button mat-button>
-        <span>About</span>
-      </button> -->
   </mat-toolbar>
 </div>

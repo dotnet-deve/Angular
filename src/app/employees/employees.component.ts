@@ -13,7 +13,7 @@ import { MatTableDataSource } from '@angular/material/table';
 })
 export class EmployeesComponent {
   public allEmployees = new MatTableDataSource<IEmployees>([]);
-  displayedColumns: string[] = ['id', 'firstName', 'lastName','email','designation','experience','technicalSkills','action'];
+  displayedColumns: string[] = ['firstName', 'lastName','email','designation','experience','technicalSkills','action'];
   
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -38,15 +38,15 @@ export class EmployeesComponent {
   }
 
   openDeleteModel(id: number){
-    const confirmDelete =this.dialog.open(DeleteEmployeeComponent,{
+    let confirmDelete =this.dialog.open(DeleteEmployeeComponent,{
       width: "250px",
       data:{ id}
     });
     confirmDelete.afterClosed().subscribe((result)=>{
       if(result){
-        //this.allEmployees = this.allEmployees.filter((_)=> _.id !== id)
-        this.allEmployees.data = this.allEmployees._filterData(this.allEmployees.data)
+        this.allEmployees.data = this.allEmployees.data.filter(x=>x.id !== id)
       }
     })
+    
   }
 }

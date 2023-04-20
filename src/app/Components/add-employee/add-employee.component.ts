@@ -9,14 +9,20 @@ import { EmployeesService } from 'src/app/Services/employees.service';
   styleUrls: ['./add-employee.component.css']
 })
 export class AddEmployeeComponent {
-  employeeRecords:IEmployees={
-    id:0,
+  employeeRecords:any={
     firstName:'',
     lastName:'',
+    gender:'',
     email:'',
+    address1:'',
+    address2:'',
+    phoneNumber:'',
+    telePhoneNumber:'',
+    skills:'',
+    experience:'',
+    grade:'',
     designation:'',
-    experience:0,
-    technicalSkills:''
+    hobbies:''
 
   }
   constructor(private rs: EmployeesService, private router:Router){
@@ -25,7 +31,7 @@ export class AddEmployeeComponent {
 
   addRecords(){
     this.rs.addNewEmployee(this.employeeRecords).subscribe(()=>{
-      this.router.navigate(["/"]);
+    this.router.navigate(['/home/employees']);
     })
   }
 }

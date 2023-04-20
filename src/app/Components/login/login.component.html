@@ -7,14 +7,14 @@
       <form (ngSubmit)="onLogin()" name="loginForm" [formGroup]="loginForm">
         <div class="emailInput">
           <mat-form-field class="full-width" appearance="outline">
-            <mat-label>Email</mat-label>
+            <mat-label>Username</mat-label>
             <input
-              formControlName="email"
+              formControlName="username"
               matInput
               placeholder="Enter email address"
               required
             />
-            <mat-error *ngIf="!loginForm.controls['email'].valid">
+            <mat-error *ngIf="!loginForm.controls['username'].valid">
               Email is required
             </mat-error>
           </mat-form-field>
@@ -53,7 +53,7 @@
             </mat-error>
           </mat-form-field>
         </div>
-        <button mat-flat-button color="primary" (click)="showSuccess()">Login</button>
+        <button mat-flat-button color="primary">Login</button>
       </form>
 
       <div class="text-center pt-4 text-muted">
@@ -62,3 +62,4 @@
     </mat-card-content>
   </mat-card>
 </div>
+<lib-ng-toast></lib-ng-toast>

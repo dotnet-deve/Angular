@@ -10,6 +10,7 @@ import { LoginComponent } from './Components/login/login.component';
 import { ProjectsComponent } from './Components/projects/projects.component';
 import { RegisterComponent } from './Components/register/register.component';
 import { EmployeesComponent } from './employees/employees.component';
+import { ViewEmployeeComponent } from './Components/view-employee/view-employee.component';
 
 const routes: Routes = [
   {path:'login', component:LoginComponent},
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path:'employees', component:EmployeesComponent},
   {path:'add-employee',component:AddEmployeeComponent},
   {path:'edit-employee/:id',component:EditEmployeeComponent},
+  {path:'view-employee/:id',component:ViewEmployeeComponent},
   {path:'delete-employee/:id',component:DeleteEmployeeComponent}
   ]},
   

@@ -13,7 +13,6 @@ import { RegisterComponent } from './Components/register/register.component';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
-import { LayoutComponent } from './Components/layout/layout.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { HomeComponent } from './Components/home/home.component';
@@ -29,13 +28,16 @@ import { FormsModule } from '@angular/forms';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { ToastrModule } from 'ngx-toastr';
 import { CommonModule } from '@angular/common';
+import { ProfileMenuComponent } from './Components/profile-menu/profile-menu.component';
+import { NgToastModule } from 'ng-angular-popup';
+import {MatMenuModule} from '@angular/material/menu';
+import { ViewEmployeeComponent } from './Components/view-employee/view-employee.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    LayoutComponent,
     DashboardComponent,
     HomeComponent,
     ProjectsComponent,
@@ -43,6 +45,8 @@ import { CommonModule } from '@angular/common';
     DeleteEmployeeComponent,
     AddEmployeeComponent,
     EditEmployeeComponent,
+    ProfileMenuComponent,
+    ViewEmployeeComponent,
   ],
   imports: [
     BrowserModule,
@@ -68,7 +72,8 @@ import { CommonModule } from '@angular/common';
       positionClass: 'toast-bottom-right',
       preventDuplicates: true,
     }),
-    
+    NgToastModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

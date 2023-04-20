@@ -9,57 +9,72 @@
         name="registerForm"
         [formGroup]="registerForm"
       >
-        <div class="userName">
+        <div class="firstname">
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Firstname</mat-label>
+            <input
+              formControlName="firstname"
+              matInput
+              placeholder="firstname"
+              required
+            />
+            <mat-error *ngIf="!registerForm.controls['firstname'].valid">
+              firstame is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="lastname">
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Lastname</mat-label>
+            <input
+              formControlName="lastname"
+              matInput
+              placeholder="lastname"
+              required
+            />
+            <mat-error *ngIf="!registerForm.controls['lastname'].valid">
+              lastname is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="username">
           <mat-form-field class="full-width" appearance="outline">
             <mat-label>Username</mat-label>
             <input
               formControlName="username"
               matInput
-              placeholder="Enter Your Name"
+              placeholder="username"
               required
             />
             <mat-error *ngIf="!registerForm.controls['username'].valid">
-              Name is required
+              username is required
             </mat-error>
           </mat-form-field>
         </div>
 
-        <div class="surName">
-          <mat-form-field class="full-width" appearance="outline">
-            <mat-label>Surname</mat-label>
-            <input
-              formControlName="surname"
-              matInput
-              placeholder="Enter your surname"
-              required
-            />
-            <mat-error *ngIf="!registerForm.controls['surname'].valid">
-              surname is required
-            </mat-error>
-          </mat-form-field>
-        </div>
-
-        <div class="emailInput">
+        <div class="email">
           <mat-form-field class="full-width" appearance="outline">
             <mat-label>Email</mat-label>
             <input
               formControlName="email"
               matInput
-              placeholder="Enter email address"
+              placeholder="email address"
               required
             />
             <mat-error *ngIf="!registerForm.controls['email'].valid">
-              Email is required
+              email is required
             </mat-error>
           </mat-form-field>
         </div>
 
-        <div>
+        <div class="password">
           <mat-form-field class="full-width" appearance="outline">
             <mat-label>New Password</mat-label>
             <input
               matInput
-              placeholder="Enter your password"
+              placeholder="password"
               type="password"
               formControlName="password"
             />
@@ -75,7 +90,7 @@
             >
           </mat-form-field>
         </div>
-        <div>
+        <div class="confirm-password">
           <mat-form-field
             class="full-width"
             appearance="outline"
@@ -116,10 +131,10 @@
             >
           </mat-radio-group>
         </div>
-        <button mat-flat-button color="primary">Register</button>
+        <button class="centerButton" style="text-align: center;" mat-flat-button color="primary">Register</button>
       </form>
 
-      <div class="text-center pt-4 text-muted">
+      <div class="text-center pt-4 text-muted centerButton">
         Already have account? <a id="forget" routerLink="/login">Login</a>
     </div>
       &nbsp;

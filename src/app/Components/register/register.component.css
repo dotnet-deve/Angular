@@ -1,9 +1,7 @@
 mat-card {
   max-width: 600px;
   margin: 1em auto;
-  text-align: center;
   max-height: 600px;
-  padding:  0 60px;
 }
 
 .outer{
@@ -38,20 +36,33 @@ a:hover {
   text-align: center;
 }
 
-.userName {
-  padding-top: 10px;
+.firstname {
+  width:50%;
+  display: inline-flex;
+  
 }
-.surName {
-  padding-top: 10px;
+.lastname {
+  width:50%;
+  display: inline-flex;
 }
-.selectGender {
-  padding-top: 10px;
+.username {
+  width:50%;
+  display: inline-flex;
+}
+.gender {
+  display: inline-flex;
 } 
-.forget-password {
-  padding-left: 0px;
+.password {
+   width:50%;
+  display: inline-flex;
 }
-.emailInput {
-  padding-top: 10px;
+.confirm-password {
+  width:50%;
+ display: inline-flex;
+}
+.email {
+  width:50%;
+  display: inline-flex;
 }
 
 .contentBody {
@@ -66,10 +77,9 @@ a:hover {
   text-decoration: none;
 }
 
-mat-form-field {
-  --mat-mdc-form-field-floating-label-scale: 0.75;
-  /* display: inline-flex; */
-  flex-direction: column;
-  min-width: 0;
-  text-align: left;
+.centerButton{
+  justify-content: center;
+  left:40%;
+  text-align: center;
+
 }

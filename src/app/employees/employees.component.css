@@ -1,60 +1,69 @@
 .container {
   display: flex;
   align-items: center;
-  justify-content: center;
   width: auto;
   height: auto;
+  padding-bottom: 10px;
 }
+.header{
+  padding-top: 20px;
+  padding-left: 90%;
+  text-align-last: left;
 
+}
 .allEmployees {
   padding: 20px;
 }
-
-/* .mdc-data-table__table {
-  width: 50%;
-  border: 0;
-  white-space: nowrap;
-  border-spacing: 0;
-  table-layout: relative;
-} */
-
 .fontIcon {
   font-size: 50px;
   height: auto;
   width: auto;
 }
 .icon {
-  padding-right: 90%;
+  padding-left: 90%;
 }
 .outer {
-  display: table-caption;
+  display:flex;
   text-align: center;
   font-size: 30px;
   font-weight: bold;
   flex-direction: column;
   justify-content: center;
-}
-
+  align-items: center;
+  }
 
 .mat-header-cell {
     flex-direction: column;
     justify-content: center;
   }
   
+  .mdc-data-table__cell {
+    box-sizing: border-box;
+    overflow: inherit;
+    overflow-y: inherit;
+    text-align: left;
+    
+}
   .mat-cell {
     text-align: center;
     justify-content:center;
+    
+  }
+  .mat-icon{
+    display: flex;
   }
 
-/* table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  th, td {
-    text-align: left;
-    padding: 8px;
-  }
-  
-  tr:nth-child(even) {background-color: #f2f2f2;} */
+  .mat-mdc-table {
+    table-layout: auto;
+    white-space: normal;
+    position: absolute;
+    padding: 20px;
+}
 
+mat-paginator {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  margin: 0 auto;
+}
+ 
